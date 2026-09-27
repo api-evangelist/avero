@@ -1,0 +1,23 @@
+generated: '2026-09-26'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://averoinc.com/packages/
+sources:
+- https://averoinc.com/packages/
+name: Avero pricing
+audience: business-product
+pricing_basis: per-seat
+plans:
+- name: Starter
+  price_text: $0 (FREE!)
+  price: 0
+  description: Free for any users and locations you want.
+- name: Essentials
+  price_text: Starting at $300 / location / year
+  price: 300
+  description: Price increases based on annual sales volume.
+- name: Professional
+  price_text: Starting at $600 / location / year
+  price: 600
+  description: Price increases based on annual sales volume.
+docs: https://averoinc.com/packages/

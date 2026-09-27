@@ -1,0 +1,75 @@
+generated: '2026-09-27'
+method: probed
+source: pre-flight dossier (docs platform, portal detections) + CNAME chains and response headers of the hosts apis.yml names
+registry: all/0-working/vendors.yml
+areas_vocabulary:
+- documentation
+- developer-portal
+- api-gateway
+- cdn
+- hosting
+- sdk-generation
+- api-collections
+- status-page
+- support
+- community
+- identity
+- mcp-hosting
+vendors:
+- vendor: apigee
+  name: Apigee (Google Cloud)
+  area: api-gateway
+  host: developer.averoinc.com
+  evidence: cname:apigee.net
+  signal: cname
+  confidence: high
+  kin_score:
+  - developer_portal
+  - rate_limits_documented
+  - authentication
+- vendor: cloudflare
+  name: Cloudflare
+  area: cdn
+  host: averoinc.com
+  evidence: header:cf-ray
+  signal: header
+  confidence: high
+  kin_score:
+  - https_enforced
+  - hsts
+- vendor: apigee
+  name: Apigee (Google Cloud)
+  area: developer-portal
+  host: developer.averoinc.com
+  evidence: cname:apigee.net
+  signal: cname
+  confidence: high
+  kin_score:
+  - developer_portal
+  - rate_limits_documented
+  - authentication
+- vendor: wpengine
+  name: WP Engine
+  area: hosting
+  host: averoinc.com
+  evidence: header:x-powered-by:wp engine
+  signal: header
+  confidence: high
+  kin_score: []
+reliance:
+  areas_vendor_served:
+  - api-gateway
+  - cdn
+  - developer-portal
+  - hosting
+  vendor_count: 3
+  areas_observed: 12
+  share_of_observable_areas: 0.333
+  note: areas where a third party was DETECTED serving this provider; an area absent here was either self-run or not observed, and this script
+    cannot tell those apart
+checked:
+- 'docs-platform: no-docs-host'
+- status.averoinc.com (StatusPage)
+- login.averoinc.com (Login)
+- developer.averoinc.com (Documentation)
+- averoinc.com (Website)
