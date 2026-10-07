@@ -40,6 +40,8 @@ maintainers:
   email: info@apis.io
 
 common:
+- type: Pricing
+  url: https://averoinc.com/packages/
 - type: Plans
   url: plans/avero-plans-pricing.yml
 - type: SecurityTxt
